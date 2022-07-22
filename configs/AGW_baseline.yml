@@ -2,19 +2,19 @@ MODEL:
   PRETRAIN_CHOICE: "imagenet"
   PRETRAIN_PATH: "/home/zhangjunwu/.cache/torch/hub/checkpoints/resnet50-19c8e357.pth"
   # PRETRAIN_PATH: "/home/zhangjunwu/privacy-reid/market1501_AGW.pth"
-  PRETRAIN_DIR: "./log/market1501/GCR-noise-5-1"  # for the trained weight for testing
+  PRETRAIN_DIR: "./log/market1501/GCR-noise-5-1" # for the trained weight for testing
   CENTER_LOSS: "on"
   CENTER_FEAT_DIM: 2048
   NAME: "resnet50_nl"
   WEIGHT_REGULARIZED_TRIPLET: "on"
   GENERALIZED_MEAN_POOL: "on"
-  MODE: "GCR"  # C for common AGW
+  MODE: "GCR" # C for common AGW
   OUTPUT_MODE: "both"
   EPOCH: "best"
-  VAL_R1: 0.75  # epsilon r1
-  PSNR: 1.0  # epsilon psnr
-  SSIM: 0.05  # epsilon ssim
-  DEVICE_ID: "'0,1'"
+  VAL_R1: 0.75 # epsilon r1
+  PSNR: 1.0 # epsilon psnr
+  SSIM: 0.05 # epsilon ssim
+  DEVICE_ID: "'0'"
 
 INPUT:
   IMG_SIZE: [256, 128]
@@ -22,13 +22,13 @@ INPUT:
   RE_PROB: 0.5 # random erasing
   PADDING: 10
   DIRECTION: "AtoB"
-  TYPE: "noise"  # noise, blur, mosaic
-  RADIUS: 0.5  # 0.5 for noise, 12.0 for blur, 24.0 for mosaic
+  TYPE: "noise" # noise, blur, mosaic
+  RADIUS: 0.5 # 0.5 for noise, 12.0 for blur, 24.0 for mosaic
   PIXEL_MEAN: [0.485, 0.456, 0.406] # [0.485, 0.456, 0.406] # [0.5, 0.5, 0.5]
   PIXEL_STD: [0.5, 0.5, 0.5] # [0.229, 0.224, 0.225]
 
 DATASETS:
-  NAMES: ('market1501')  # market1501/market1501_valcuhk03/cuhk03_val/msmt17/msmt17_val
+  NAMES: ('market1501') # market1501/market1501_valcuhk03/cuhk03_val/msmt17/msmt17_val
   ROOT_DIR: ('/data/zjw_data/Dataset')
   # ROOT_DIR: ('/data1/zjw/privacy-reid/log/msmt17/C-pixelation-24-val-4-fix-1')
 
@@ -65,10 +65,10 @@ TEST:
   RE_RANKING: "off"
   WEIGHT: "path"
   FEAT_NORM: "on"
-  EVALUATE_ONLY: "off"  # on for test
+  EVALUATE_ONLY: "off" # on for test
   PARTIAL_REID: "off"
-  GALLERY_MODE: "both"  # origin/protected/both
-  QUERY_MODE: "origin"  # origin/protected/both
+  GALLERY_MODE: "both" # origin/protected/both
+  QUERY_MODE: "origin" # origin/protected/both
 
 OUTPUT_DIR: "./log/market1501/GCR-noise-5-1"
 # OUTPUT_DIR: "./log/market1501/GCR-pixelation-24-val-fix-1"
