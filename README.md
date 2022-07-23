@@ -9,9 +9,27 @@ ACM MM, 2022
 1. A reversible visual anonymization framework for Re-ID on hybrid images composed of raw and protected images.
 2. A progressive training strategy, namely supervision upgradation, which improves Re-ID performance while retaining enough unrecognizability.
 
-## Pretrained Models
+## Qualitative Results
+
+![image-20220723162644991](C:\Users\junwu\AppData\Roaming\Typora\typora-user-images\image-20220723162644991.png)
+
+![image-20220723162508012](C:\Users\junwu\AppData\Roaming\Typora\typora-user-images\image-20220723162508012.png)
+
+## Quantitative Results & Pretrained Models
 
 Pretrained models will be published later.
+
+#### Market-1501 Dataset
+
+
+
+#### MSMT17  Dataset
+
+
+
+#### CUHK03  Dataset
+
+
 
 ## Quick Start
 
