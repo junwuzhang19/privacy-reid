@@ -11,25 +11,41 @@ ACM MM, 2022
 
 ## Qualitative Results
 
-![image-20220723162644991](C:\Users\junwu\AppData\Roaming\Typora\typora-user-images\image-20220723162644991.png)
+![qualitative results](https://s2.loli.net/2022/07/23/XdFu43kOUyxwC6f.png)
 
-![image-20220723162508012](C:\Users\junwu\AppData\Roaming\Typora\typora-user-images\image-20220723162508012.png)
+![qualitative results](https://s2.loli.net/2022/07/23/3YINeCmdf1b8v6B.png)
 
 ## Quantitative Results & Pretrained Models
 
 Pretrained models will be published later.
 
+The detailed results can be found in the main [paper](https://doi.org/10.1145/3503161.3548766) and the results of widely used unprotected Re-ID model AGW can be found [here](https://github.com/mangye16/ReID-Survey).
+
 #### Market-1501 Dataset
 
+|            |        Blur         |       Mosaic        |        Noise        |
+| :--------: | :-----------------: | :-----------------: | :-----------------: |
+|    Base    | 84.8/40.1/18.3/67.3 | 87.4/75.3/70.9/64.3 | 75.9/50.8/41.7/68.7 |
+| Ours w/o U | 83.1/68.3/46.8/75.8 | 86.3/80.1/75.1/73.2 | 90.4/77.5/67.5/84.4 |
+|    Ours    | 91.6/88.2/82.5/89.2 | 89.4/88.5/86.8/87.0 | 91.7/83.5/83.8/91.2 |
 
+The four values separated by '/' are corresponding to the rank-1 accuracy under raw/crossed/protected settings in the main paper.
 
 #### MSMT17  Dataset
 
-
+|            |        Blur         |       Mosaic        |        Noise        |
+| :--------: | :-----------------: | :-----------------: | :-----------------: |
+|    Base    | 30.5/21.3/16.2/15.2 | 25.0/16.3/14.6/10.6 | 24.1/20.1/18.5/18.2 |
+| Ours w/o U | 43.6/28.4/10.0/14.7 | 34.3/26.2/24.6/20.5 | 41.9/36.0/29.4/31.3 |
+|    Ours    | 51.5/51.1/50.5/48.7 | 48.6/49.1/48.5/48.1 | 46.9/48.1/46.2/46.0 |
 
 #### CUHK03  Dataset
 
-
+|            |        Blur         |       Mosaic        |        Noise        |
+| :--------: | :-----------------: | :-----------------: | :-----------------: |
+|    Base    | 30.4/14.6/10.4/8.2  | 28.5/17.7/15.1/8.8  |  14.0/9.1/8.6/8.1   |
+| Ours w/o U | 31.6/13.8/8.9/14.3  | 24.9/24.2/19.6/12.1 | 28.1/30.4/30.4/31.9 |
+|    Ours    | 41.9/39.2/35.3/33.2 | 38.8/37.8/30.4/27.6 | 35.8/36.4/37.9/41.9 |
 
 ## Quick Start
 
